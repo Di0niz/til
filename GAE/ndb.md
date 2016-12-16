@@ -14,3 +14,13 @@ list_of_keys = ndb.put_multi(list_of_entities)
 list_of_entities = ndb.get_multi(list_of_keys)
 ndb.delete_multi(list_of_keys)
 ```
+
+
+## Удаление записей
+
+
+```
+from app.models.db import JSonData
+
+ndb.delete_multi(JSonData.query().fetch(keys_only=True))
+```
