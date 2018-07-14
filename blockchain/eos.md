@@ -30,6 +30,13 @@ sudo yum install git -y
 ```sh
 vi scripts/eosio_build_centos.sh 
 ```
+изменить следующие параметры:
+```make
+MEM_MEG=1700
+JOBS=2
+...
+if [ "${MEM_MEG}" -lt 1600 ]; then
+```
 
 ### Установка
 
